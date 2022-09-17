@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+nav {
+    height: 50px;
+    width: 100%;
+    background-color: orange;
+} 
+
+nav a {
+    text-decoration: none;
+    color: white;
+    line-height: 50px;
+    margin-left: 10%;
+}
+
+form {
+    height: auto;
+    width: 100%;
+    margin-top: 2%;
+    margin-left: 10%;
+}
+
+form input {
+    height: 40px;
+    width: 200px;
+}
+
+form button {
+    height: 40px;
+    width: 100px;
+    color: white;
+    background-color: red;
+    border-color: red;
+}
