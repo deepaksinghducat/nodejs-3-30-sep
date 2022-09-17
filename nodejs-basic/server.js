@@ -2,12 +2,15 @@ const http = require('http');
 
 const express = require('express');
 var bodyParser = require('body-parser')
+
+const adminRoutes = require('./routes/admin');
+const path = require('path');
+
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(bodyParser.json())
-
 
 // const server = http.createServer((req,res) => {
 
@@ -52,23 +55,27 @@ app.use(bodyParser.json())
 // 	console.log('server is listening on port 3000');
 // },)
 
-const isAuthenticated = 1;
+// const isAuthenticated = 1;
 
-app.use('/', (req,res,next) => {
-    if(isAuthenticated) {
-		next();
-	}else{
-		res.send('not authenticated');
-	}
-})
+// app.use('/', (req,res,next) => {
+//     if(isAuthenticated) {
+// 		next();
+// 	}else{
+// 		res.send('not authenticated');
+// 	}
+// })
 
-app.post('/send-data', (req, res, next) => {
-	res.send(req.body)
-});
+// app.post('/admin/send-data', (req, res, next) => {
+// 	res.send(req.body)
+// });
 
-app.get('/fdsafadsfdsaf', (req,res) => {
-	res.send(req.method);
-})
+// app.get('/shop/fdsafadsfdsaf', (req,res) => {
+// 	res.send(req.method);
+// })
+
+app.use('/admin',adminRoutes);
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(3000,() => {
 	console.log('server is listening on port 3000');
