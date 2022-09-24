@@ -1,0 +1,11 @@
+include layouts/header.pug
+nav
+    a(href="/admin/dashboard") Home
+
+form(method="POST" action="/admin/posts") 
+    input(type="text" name="name")
+    button(type="submit") Submit
+
+ul 
+    each val in array 
+        li(style="margin-left: 100px")=val

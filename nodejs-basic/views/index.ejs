@@ -1,0 +1,21 @@
+
+   <%- include('layouts/header.ejs') %>
+
+    <nav>
+        <a href="/admin/dashboard">Home</a>
+    </nav>
+
+    <h1><%= title %></h1>
+
+    <form method="POST" action="/admin/posts"> 
+        <input type="text" name="name" />
+        <button type="submit">Submit</button>
+    </form>
+
+    <ul style="margin-left: 100px;">
+        <% for(let arr of array) { %>
+            <li><%= arr %></li>
+        <% } %>
+    </ul>
+</body>
+</html>
