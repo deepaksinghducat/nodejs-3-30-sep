@@ -1,0 +1,39 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="/">Navbar</a>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        Cart
+                        <span class="badge bg-danger">10</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Register</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/admin/profile" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Accounts
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="/admin/profile">Profile</a></li>
+                        <li><a class="dropdown-item" href="/admin/orders">Orders</a></li>
+                        <li><a class="dropdown-item" href="/admin/products">Product</a></li>
+                        <li><a class="dropdown-item" href="/admin/users">Users</a></li>
+                        <li><a class="dropdown-item" href="/admin/roles">Roles</a></li>
+                        <li><a class="dropdown-item" href="/admin/logout">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
