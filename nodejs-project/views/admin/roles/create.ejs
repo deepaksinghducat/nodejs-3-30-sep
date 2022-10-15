@@ -11,27 +11,24 @@
             <a href="/admin/roles" style="float: right;"><button type="button" class="btn btn-primary">Back</button></a>
         </h4>
 
-        <form class="row g-3 mt-4">
-         <div class="col-md-12">
-           <label for="validationCustom01" class="form-label">First name</label>
-           <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-           <div class="valid-feedback">
-             Looks good!
-           </div>
-         </div>
-         <div class="col-md-12">
-           <label for="validationCustom04" class="form-label">State</label>
-           <select class="form-select" id="validationCustom04" required>
-             <option selected disabled value="">Choose...</option>
-             <option>...</option>
-           </select>
-           <div class="invalid-feedback">
-             Please select a valid state.
-           </div>
-         </div>        
-         <div class="col-12">
-           <button class="btn btn-primary" type="submit">Submit form</button>
-         </div>
+        <form class="row g-3 mt-4" method="POST" action="/admin/roles">
+          <div class="col-md-12">
+            <label for="validationCustom01" class="form-label">Role name</label>
+            <input type="text" name="name" class="form-control" id="validationCustom01" required placeholder="Enter Role">
+          </div>
+          <div class="col-md-12">
+            <label for="validationCustom04" class="form-label">status</label>
+            <select name="status" class="form-select" id="validationCustom04" required>
+              <option value="1">Active</option>
+              <option value="2">InActive</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid state.
+            </div>
+          </div>        
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Submit form</button>
+          </div>
        </form>
        </div>
     </div>

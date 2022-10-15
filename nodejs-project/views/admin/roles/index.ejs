@@ -17,18 +17,22 @@
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Name</th>
+                                <th scope="col">Status</th>
                                 <th scope="col">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <% for(let role of roles) { %>
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
+                                <th scope="row"><%- role.id %></th>
+                                <td><%- role.name%></td>
+                                <td><%- role.status === true ? 'active' : 'inactive' %></td>
                                 <td>
-                                    <a href="/admin/role/edit/1"  class="btn btn-outline-primary">Edit</a>
-                                    <button type="button" class="btn btn-outline-danger">Delete</button>
+                                    <a href='/admin/role/edit/<%- role.id%>'  class="btn btn-outline-primary">Edit</a>
+                                    <a href='/admin/role/delete/<%- role.id%>' class="btn btn-outline-danger" >Delete</a>
                                 </td>
                             </tr>
+                            <% } %>
                         </tbody>
                     </table>
                 </div>

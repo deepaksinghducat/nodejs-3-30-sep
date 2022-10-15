@@ -1,7 +1,19 @@
 const http = require('http');
+const mongoose = require('mongoose');
 
 const express = require('express');
 var bodyParser = require('body-parser')
+
+
+// Database configuration
+mongoose
+    .connect('mongodb://localhost:27017/ecommerce')
+    .then(con => {
+        console.log(`Mongodb is connected on host: ${con.connection.host}`);
+    })
+    .catch(err => {
+        console.log(err);
+    })
 
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');

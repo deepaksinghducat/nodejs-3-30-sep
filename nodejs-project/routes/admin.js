@@ -52,8 +52,8 @@ Router.post('/roles', RoleController.storeRole);
 
 Router.get('/role/edit/:id', RoleController.editRole);
 
-Router.post('/role/update', RoleController.updateRole);
+Router.post('/role/update/:id', RoleController.updateRole);
 
-Router.delete('/role/delete', RoleController.deleteRole);
+Router.get('/role/delete/:id', RoleController.deleteRole);
 
 module.exports = Router;
